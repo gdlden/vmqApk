@@ -93,7 +93,6 @@ jobs:
       # package
       - name: Pack
         run: |
-          mkdir -p build/outputs/apk/release/
           cd ${{ env.main_project_module }}/build/outputs/apk/release/
           tar zcvf ${{ env.app_name }}-${{ steps.tagName.outputs.tag }}.tar.gz `ls`
           sha256sum ${{ env.app_name }}-${{ steps.tagName.outputs.tag }}.tar.gz > ${{ env.app_name }}-${{ steps.tagName.outputs.tag }}.sha256.txt
