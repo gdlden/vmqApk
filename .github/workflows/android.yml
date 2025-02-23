@@ -22,7 +22,7 @@ jobs:
       - name: show details
         run: tree .
       - name: Releasing using Hub
-        uses: jebarpg/release-apk@main
+        uses: gdlden/release-apk@main
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           APP_FOLDER: app
